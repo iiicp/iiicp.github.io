@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/no-style-please/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/no-style-please/" rel="alternate" type="text/html" /><updated>2020-12-07T19:35:52+08:00</updated><id>http://localhost:4000/no-style-please/feed.xml</id><title type="html">keep trying!</title><subtitle>A (nearly) no-CSS, fast, minimalist Jekyll theme.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/no-style-please/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/no-style-please/" rel="alternate" type="text/html" /><updated>2020-12-07T20:26:37+08:00</updated><id>http://localhost:4000/no-style-please/feed.xml</id><title type="html">keep trying!</title><subtitle>A (nearly) no-CSS, fast, minimalist Jekyll theme.
 </subtitle><author><name>Riccardo Graziosi</name></author><entry><title type="html">开始clang/llvm学习</title><link href="http://localhost:4000/no-style-please/init-post.html" rel="alternate" type="text/html" title="开始clang/llvm学习" /><published>2020-12-07T00:00:00+08:00</published><updated>2020-12-07T00:00:00+08:00</updated><id>http://localhost:4000/no-style-please/init-post</id><content type="html" xml:base="http://localhost:4000/no-style-please/init-post.html">&lt;h3 id=&quot;clang26的总体印象&quot;&gt;clang2.6的总体印象&lt;/h3&gt;
 
 &lt;p&gt;花了两三周时间来抽离clang第一个释放版本的代码。
@@ -6,8 +6,8 @@ clang是基于llvm的一个c/c++/oc的前端项目, 负责用户输入的命令�
 调用llvm的模块代码进行代码生成，另外还要提供用户的输出，比如原生token输出、预处理token输出、预处理输出
 （是否保留注释、是否保留line指令，是否保留define指令呀等）、HTML和XML格式输出、语法树输出等，简而言之就是
 尽量智能化的处理用户的action、尽量多元化的输出内容给用户。中间的内容就是传统的编译原理内容（词法包含预处理，语法、语义）
-clang是同时支持三种语言，所以提出来了语言配置选项来进行扩展，clang同时也处理用户要指定生成某一个平台，所以也自动配置了target信息，clang的diagnoist信息是一个依赖tablegen来生成的，虽然对源码阅读者不友好，但是对clang developer来说要更好，写
-更少的代码来生成和扩展更多的诊断信息。预处理和词法分析用不同的类来抽象，同时又整合在一起是非常优秀的。对于文件的抽象也
+clang是同时支持三种语言，所以提出来了语言配置选项来进行扩展，clang同时也处理用户要指定生成某一个平台，所以也自动配置了target信息，clang的diagnoist信息是一个依赖tablegen来生成的，虽然对源码阅读者不友好，但是对clang developer来说要更好，
+写更少的代码来生成和扩展更多的诊断信息。预处理和词法分析用不同的类来抽象，同时又整合在一起是非常优秀的。对于文件的抽象也
 是非常好的，虽然新手阅读起来痛苦，但是也逐渐去适应的。另外clang采用了cmake来构建，也是一个不错的构建实践。&lt;/p&gt;
 
 &lt;h3 id=&quot;通过clang能学习到什么&quot;&gt;通过clang能学习到什么&lt;/h3&gt;
@@ -26,9 +26,9 @@ clang是同时支持三种语言，所以提出来了语言配置选项来进行
 &lt;h3 id=&quot;计划步骤是什么&quot;&gt;计划步骤是什么&lt;/h3&gt;
 
 &lt;p&gt;一，编译llvm，使用cmake来引入库和头文件
-通过这几周抽离lex代码的过程，我理会到要学习clang，就要先隔离llvm会比较好，特别是到语法分析、语义分析、代码生成等
-可能依赖的llvm的东西会更多了，而这些东西都是比较经典的内容，和clang混在一起只会更加加大学习困难度。所以我打算
-将llvm编译成库，然后让我的裁剪版本clang去调用，clang基于2.6，llvm可能基于比较新的版本。通过这种模式也能学习，如何
-利用llvm来开发新项目。所以第一个难点是编译llvm，利用cmake来引入。&lt;/p&gt;
+通过这几周抽离lex代码的过程，我理会到要学习clang，就要先隔离llvm会比较好，特别是到语法分析、语义分析、
+代码生成等可能依赖的llvm的东西会更多了，而这些东西都是比较经典的内容和clang混在一起只会更加加大学习困难度。
+所以我打算将llvm编译成库，然后让我的裁剪版本clang去调用，clang基于2.6，llvm可能基于比较新的版本。
+通过这种模式也能学习，如何利用llvm来开发新项目。所以第一个难点是编译llvm，利用cmake来引入。&lt;/p&gt;
 
 &lt;p&gt;二，clang从不同的模块开始研究，目前我想的是可以从driver开始。&lt;/p&gt;</content><author><name>Riccardo Graziosi</name></author><category term="clang/llvm" /><summary type="html">这些天都在抽离clang2.6的lex代码</summary></entry></feed>

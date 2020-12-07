@@ -27,12 +27,12 @@ entries:
     url: feed.xml
   
   - title: another
-    entries:
+    # entries:
       # - title: with subitems
-      #   entries:
+    entries:
       #     - title: with subsubitems
-          - title: about me 
-            url: about
+        - title: about me 
+          url: about
   # - title: PRO TIP
   #   entries:
   #     - title: to edit this menu, edit _data/menu.yml file
