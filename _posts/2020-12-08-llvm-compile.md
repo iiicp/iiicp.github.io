@@ -13,6 +13,7 @@ excerpt: 终于能使用llvm了
 ```  
 mkdir build && cd build
 
+# -DLLVM_TARGETS_TO_BUILD=X86
 cmake ../llvm-3.5xxx -DCMAKE_BUILD_TYPE=Debug
 
 cmake --build .  
