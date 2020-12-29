@@ -5,8 +5,6 @@ tags: audio process
 excerpt: audio  
 ---   
 
-### 使用cmake在android平台编译webrtc的aec模块
-
 使用c++开发项目不方便的地方就在于构建，在早期linux平台采用makefile，windows平台是visual studio，iOS平台是xcode，android平台是android.mk之类，windows和iOS相对来说简单点，毕竟有
 完善的IDE，导入文件设置头文件和库文件路径，编译生成动态库、静态库都很方便。但是android和linux
 平台体验就差了点，还好有cmake工具，通过cmake在android和linux平台可以不用太做修改的构建。
