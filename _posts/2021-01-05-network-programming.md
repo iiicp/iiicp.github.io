@@ -82,7 +82,9 @@ excerpt: about network programing
 	
 	二: 通过SO_SENDBUF && SO_RCVBUF修改socket输入和输出缓冲区大小  
 
-	通过设置SO_REUSEADDR为1，来解决bind() error. 场景是先进行ctrl+c关闭服务端，相当于服务端发送了FIN
+	三: 设置SO_REUSEADDR为1，解决服务器重启的bind() error.
+
+	场景是先进行ctrl+c关闭服务端，相当于服务端发送了FIN
 	信息，此时再次用相同的端口来启动服务器，此时服务器会启动不了，出现bind() error错误。大约3分钟后，服务器
 	可以启动起来。
 
@@ -100,7 +102,8 @@ excerpt: about network programing
 	time_wait状态的作用是保证最后的ACK消息可达. time_wait状态也并不是一直都好，有时候我们需要立即重启服务，所以
 	需要将处于time_wait状态的端口号重新分配给新的套接字。
 
-	三: TCP_NODELAY 
+	四: TCP_NODELAY 
+	
 	Nagle算法是为了减少网络负载，每次发送一个包，需等待ACK后，才能再次发送下一个包，Nagle算法充分利用了缓冲区，因为在等待ACK
 	的时候，缓冲区能够填入更多的数据，下一个包就能传输更多的数据了，使用Nagle算法能够大大减少网络包的数量，从而减少了网络负载。
 	但是当网络数据包总量不变的情况下，关闭Nagle算法，速度会更快，因为不需要先等待ACK回来，比如传输大文件的时候。
