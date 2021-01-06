@@ -69,29 +69,6 @@ excerpt: about network programing
 	第四次		A->B 	ACK(SEQ:5001, ACK:7002) A向B反馈，表示成功收到了请求断开的消息      
 
 12. tcp怎样通过ack和seq保证消息不丢失?  
-=======
-9.  tcp三次握手     
-
-	第一次		A->B 	SYN(SEQ:1000, ACK:-)
-
-	第二次		B->A    SYN+ACK(SEQ:2000, ACK:1001)             
-	第三次		A->B  	ACK(SEQ:1001, ACK:2001)       
-
-10. tcp正常传输数据       
-	第一次		A->B 	SEQ:1200 数据100字节     
-	第二次		B->A    ACK:1301 已成功接收100个字节，请发送序列号为1301的数据包     
-	第三次		A->B 	SEQ:1301 数据200字节     
-	第四次		B->A 	ACK:1502 已成功接收200个字节，请发送序列号为1502的数据包      
-
-	若没有收到ACK消息，则会触发超时重传机制.
-
-11. tcp四次挥手        
-	第一次	 	A->B 	FIN(SEQ:5000, ACK:-)     
-	第二次		B->A 	ACK(SEQ:7000, ACK:5001) B向A反馈，表示成功收到了请求断开的消息     
-
-	第三次 		B->A 	FIN(SEQ:7001, ACK:5001)      
-	第四次		A->B 	ACK(SEQ:5001, ACK:7002) A向B反馈，表示成功收到了请求断开的消息     
->>>>>>> update about network && thread
 
 	通过ACK的应答知道是否对方成功收到了自己发送的消息，如果没有收到应答，会重新发送SEQ消息
 
