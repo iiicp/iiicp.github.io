@@ -87,6 +87,38 @@ openblas time: 0.004ms
 
 ### LSTM算子实现
 
+LSTM的逻辑计算结构是下图 
+
+![lstm的逻辑结构图](https://pic3.zhimg.com/80/v2-074e25fdd8f18378e9f7d2f48d9259ca_1440w.jpg) 
+
+遗忘门  
+
+forget_gate = tf.sigmoid(tf.matmul(Xt, W1) + tf.matmul(H(t-1), W2) + b12);     
+
+信息增强门   
+
+input_gate = tf.sigmoid(tf.matmul(Xt, W3) + tf.matmul(H(t-1), W4) + b34);   
+middle_memory = tf.tanh(tf.matmul(Xt, W5) + tf.matmul(H(t-1), W6) + b56); 
+
+输出门  
+
+output_gate = tf.sigmoid(tf.matmul(Xt, W7) + tf.matmul(H(t-1), W8) + b78);
+
+最终输出   
+
+Ct = C(t-1) * forget_gate + input_gate * middle_memory; 
+Ht = tf.tanh(Ct) * output_gate;
+yt = tf.softmax(Ht) /// 未使用到 
+
+从上面的计算过程中，可以发现 Xt x W(1,3,5,7) + b(12,34,56,78) 是可以合并成 向量x矩阵+偏置也就是全连接层。
+而H(t-1) x W(2,4,6,8)可以向量x矩阵来合并优化。再将第一步和第二步求和，即可以得到所有激活函数之前的值。  
+
+
+参考链接    
+https://zhuanlan.zhihu.com/p/76174753      
+https://www.zhihu.com/question/41949741/answer/318977452
+
 
 ### CNN算子实现
+
 
