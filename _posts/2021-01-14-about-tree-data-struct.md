@@ -117,12 +117,15 @@ using namespace std;
 class UF {
 private:
   vector<int> parent;
+  vector<int> rank; /// 基于rank优化，合并两颗树
 public:
   UF(int size) {
     assert(size > 0);
     parent = vector<int>(size, 0);
-    for (int i = 0; i < size; ++i)
+    rank = vector<int>(size, 1);
+    for (int i = 0; i < size; ++i) {
       parent[i] = i; /// 默认当前id的parent就是其自己
+    }
   }
 
   /// 判断区域p和区域q是否连通
@@ -136,7 +139,16 @@ public:
     int p2 = find(q);
     if (p1 == p2)
       return;
-    parent[p1] = p2;
+
+    /// 此处优化是必须，有效的让树平衡，降低算法复杂度
+    if (rank[p1] < rank[p2])
+      parent[p1] = p2;
+    else if (rank[p1] > rank[p2])
+      parent[p2] = p1;
+    else {
+      parent[p1] = p2;
+      rank[p2]++;
+    }
   }
 
   void print() {
@@ -148,8 +160,10 @@ public:
 private:
   /// 查找p所对应的区域的根
   int find(int p) {
-    while (parent[p] != p)
+    while (parent[p] != p) {
+      parent[p] = parent[parent[p]]; /// 路径压缩(对于大数量级别还是有不少优化)
       p = parent[p];
+    }
     return p;
   }
 };
