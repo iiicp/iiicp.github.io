@@ -12,8 +12,7 @@ excerpt: audio
 
 2. speex resampler使用了宏技术方便进行api符号修改，避免了工程的实际问题 
 
-3. 下面贴下我的测试代码，注释很详细，详细工程参考我的仓库地址
-	https://github.com/iiicp/speex_resampler_test.git
+3. 下面贴下我的测试代码，注释很详细，详细工程参考[我的仓库地址](https://github.com/iiicp/project-arrange/tree/master/speex_resampler_test)
 
 ``` 
 #include <stdio.h>
