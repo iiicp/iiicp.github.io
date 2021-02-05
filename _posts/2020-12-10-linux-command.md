@@ -3,7 +3,34 @@ layout: post
 title: 常用linux命令  
 tags: clang/llvm
 excerpt: 一些常用命令 
----    
+---   
+
+### 查看系统版本 
+
+```
+uname -a 
+uname -r
+lsb_release -a
+``` 
+
+### 修改主机名 
+
+```
+临时修改主机名 
+hostname 新主机名
+
+永久修改主机名
+vim /etc/hostname 
+reboot 
+```
+
+### 查看目录大小 
+
+``` 
+du -sh 目录名
+df -hl 目录名
+```  
+ 
 
 ### 解压命令  
 
