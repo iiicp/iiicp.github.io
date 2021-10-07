@@ -1,5 +1,287 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-10-07T14:24:21+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">keep trying!</title><subtitle>A (nearly) no-CSS, fast, minimalist Jekyll theme.
-</subtitle><author><name>Riccardo Graziosi</name></author><entry><title type="html">C++17 新特性</title><link href="http://localhost:4000/c-17-new-feature.html" rel="alternate" type="text/html" title="C++17 新特性" /><published>2021-10-03T00:00:00+08:00</published><updated>2021-10-03T00:00:00+08:00</updated><id>http://localhost:4000/c++17-new-feature</id><content type="html" xml:base="http://localhost:4000/c-17-new-feature.html">&lt;p&gt;1&amp;gt; 结构化绑定&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-10-07T16:57:50+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">keep trying!</title><subtitle>A (nearly) no-CSS, fast, minimalist Jekyll theme.
+</subtitle><author><name>Riccardo Graziosi</name></author><entry><title type="html">c的type</title><link href="http://localhost:4000/c-type.html" rel="alternate" type="text/html" title="c的type" /><published>2021-10-06T00:00:00+08:00</published><updated>2021-10-06T00:00:00+08:00</updated><id>http://localhost:4000/c-type</id><content type="html" xml:base="http://localhost:4000/c-type.html">&lt;p&gt;c语言的类型不是很丰富，这也大概是c语言学起来比较简单的原因吧。&lt;/p&gt;
+
+&lt;p&gt;总体而言类型分为简单类型和复合类型。&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;简单类型&lt;/th&gt;
+      &lt;th&gt;说明&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;_Bool&lt;/td&gt;
+      &lt;td&gt;c99增加的bool类型，值只能为0或者1，非0值为1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;char/unsigned&lt;/td&gt;
+      &lt;td&gt;位宽为8bit，unsigned表示最高bit不是符号位. -128~127, (0~255)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;short/unsigned&lt;/td&gt;
+      &lt;td&gt;位宽16bit. (-2^15~2^15-1) (0~2^16-1)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;int/unsigned int&lt;/td&gt;
+      &lt;td&gt;位宽32bit&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;long/unsigned long&lt;/td&gt;
+      &lt;td&gt;sizeof(long) = 8 byte&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;long long/unsigned long long&lt;/td&gt;
+      &lt;td&gt;sizeof(long long) = 8 byte&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;float&lt;/td&gt;
+      &lt;td&gt;一般是4个字节&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;double&lt;/td&gt;
+      &lt;td&gt;一般是8个字节&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;long double&lt;/td&gt;
+      &lt;td&gt;sizeof(long double) = 16 byte&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;复合类型&lt;/th&gt;
+      &lt;th&gt;说明&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;point&lt;/td&gt;
+      &lt;td&gt;需要配合一个point to类型; point to int; point to point; point to void&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;array&lt;/td&gt;
+      &lt;td&gt;需要配合array of 类型; array of int; array of array of int; array of point to int&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;func&lt;/td&gt;
+      &lt;td&gt;决定是类型是返回类型(c++中不一样)；return of int; return of point to int&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;struct&lt;/td&gt;
+      &lt;td&gt;用户自定义类型; 可以聚合基本类型和复合类型&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;union&lt;/td&gt;
+      &lt;td&gt;用户自定义类型；取所有类型中的最大size的类型来分配内存&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;enum&lt;/td&gt;
+      &lt;td&gt;用户自定义类型；默认枚举值类型为int&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;c的作用域&lt;/p&gt;
+
+&lt;p&gt;struct/union/enum的tag属于一个作用域&lt;/p&gt;
+
+&lt;p&gt;全局变量/局部变量/typedef定义变量/struct/union成员变量属于一个作用域，内层作用域可以隐藏外层作用域，具备block作用域.&lt;/p&gt;
+
+&lt;p&gt;lable属于单独作用域，属于block内.&lt;/p&gt;
+
+&lt;p&gt;所有的enum成员属于一个作用域&lt;/p&gt;
+
+&lt;p&gt;c的类型完整性&lt;/p&gt;
+
+&lt;p&gt;所谓类型完整性是指能否求出类型的大小.&lt;/p&gt;
+
+&lt;p&gt;几处类型不完整的例子。&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;incomplete&lt;/th&gt;
+      &lt;th&gt;说明&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;void/void *&lt;/td&gt;
+      &lt;td&gt;因为没有指定具体的类型，无法求出类型大小&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;int arr[] = {1,2}&lt;/td&gt;
+      &lt;td&gt;不完整类型，没有给出数组元素的数量&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;void func();&lt;/td&gt;
+      &lt;td&gt;没有函数定义，无法确定函数类型大小&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;c的函数proto&lt;/p&gt;
+
+&lt;p&gt;由于历史语义原因，c的函数讨论有proto的概念。&lt;/p&gt;
+
+&lt;p&gt;如果c语言函数没有声明，即c语言函数是没有proto的。这会影响c语言函数传参的语义。由于没有proto，编译器会对函数实参数做默认参数提升。小于int的类型-&amp;gt;int类型，float类型-&amp;gt;double类型，这样会对函数栈参数传递，产生意想不到的问题，主要原因还是由于type的size截取导致。&lt;/p&gt;
+
+&lt;p&gt;c的类型的compatial&lt;/p&gt;
+
+&lt;p&gt;两个类型相容是指其限定符和基本类型相同。&lt;/p&gt;
+
+&lt;p&gt;比如const int a; const int b; 这两个类型是相容的。&lt;/p&gt;
+
+&lt;p&gt;struct A 和 struct B类型是不一样，同一个struct A a, struct A b，a和b类型相容。&lt;/p&gt;
+
+&lt;p&gt;如果类型不相容，在parse的时候会产生一个cast节点。&lt;/p&gt;
+
+&lt;p&gt;c的函数参数传递和赋值&lt;/p&gt;
+
+&lt;p&gt;函数参数传递隐含了类型的转换，比如小于int的类型-&amp;gt;int类型，数组转换成point *，&lt;/p&gt;
+
+&lt;p&gt;函数转换成point * func。函数参数传递的过程中，会丢失掉类型限定符。&lt;/p&gt;
+
+&lt;p&gt;c语言还存在varidic类型&lt;/p&gt;
+
+&lt;p&gt;varidic也会影响到类型相容性的比较.&lt;/p&gt;</content><author><name>Riccardo Graziosi</name></author><category term="c语言" /><summary type="html">深入学习C</summary></entry><entry><title type="html">c的linkage Property</title><link href="http://localhost:4000/c-linkage-property.html" rel="alternate" type="text/html" title="c的linkage Property" /><published>2021-10-05T00:00:00+08:00</published><updated>2021-10-05T00:00:00+08:00</updated><id>http://localhost:4000/c-linkage-property</id><content type="html" xml:base="http://localhost:4000/c-linkage-property.html">&lt;p&gt;如果不是看c编译器的实现，c的linkage property我应该关注不到。这点主要是体现在c的语义分析中。&lt;/p&gt;
+
+&lt;p&gt;c的linkage property主要是为了解决多个文件或者单个文件中同名的&lt;strong&gt;全局变量和函数&lt;/strong&gt;，如何映射到内存。注意不包含局部变量，这里的原因是局部变量是分配到栈上的，属于自动变量，在块外是不可见的，也即不存在这个linkage过程，因此局部变量是不能重名的，不同的变量名表示栈上不同的地址。局部变量的linkage都是属于none.&lt;/p&gt;
+
+&lt;p&gt;c定义了如下规则，linkage包含intern/extern/none，同时根据是否初始化分为尝试性定义和定义。默认声明的全局变量，例如：&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;/// 默认是extern property&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;是属于extern的，也即外部可见的。&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;事例&lt;/th&gt;
+      &lt;th&gt;说明&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;int a = 1;&lt;/td&gt;
+      &lt;td&gt;extern，外部文件可以访问，多个外部文件不可同时定义int a = x;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;static int a = 1;&lt;/td&gt;
+      &lt;td&gt;intern，外部文件不可访问，多个外部文件可以同时声明和定义static int a = x;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;{int a;}&lt;/td&gt;
+      &lt;td&gt;none，block外不可访问，不存在linkage，block内部不可重名&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;extern int a;&lt;/td&gt;
+      &lt;td&gt;extern第一次声明a，表示a属于外部链接。声明同时定义，编译器会有warning.  比如exern int a = 2;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;static int a; extern int a;&lt;/td&gt;
+      &lt;td&gt;此时extern并不是第一次声明a了，extern在此处只表示a是一个声明，其linkage不会改变，在此处仍然为intern.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;extern int a; static int a;&lt;/td&gt;
+      &lt;td&gt;extern int a;表示a是extern，后续的static int a；表示a是intern，此时会出现语义冲突，编译器会报错。&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;int a;  int a = 1; int a;&lt;/td&gt;
+      &lt;td&gt;多个extern变量，尝试性定义，当遇到定义的时候，可以合并到第一个定义处，即此处多个同名a变量，指向内存中的同一处单元。&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;static int a = 1; static int a = 1;&lt;/td&gt;
+      &lt;td&gt;多个intern变量，尝试性定义，当遇到定义的时候，可以合并到第一个定义处，即此处多个同名a变量，指向内存中的同一处单元。&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;我个人猜测之所以让多个同名的全局变量能够合并，也是为了最大可能的避免编译冲突。&lt;/p&gt;
+
+&lt;p&gt;所以基于linkage，对于c语言编程，尽量使用static变量，来替代默认的全局变量。如果一定要外部文件可知，在命名上尽量唯一点，避免出现多处定义。&lt;/p&gt;</content><author><name>Riccardo Graziosi</name></author><category term="c语言" /><summary type="html">深入学习c</summary></entry><entry><title type="html">一些C编译器实现的比较</title><link href="http://localhost:4000/comparison-of-some-c-compiler-implementations.html" rel="alternate" type="text/html" title="一些C编译器实现的比较" /><published>2021-10-04T00:00:00+08:00</published><updated>2021-10-04T00:00:00+08:00</updated><id>http://localhost:4000/comparison-of-some-c%20compiler-implementations</id><content type="html" xml:base="http://localhost:4000/comparison-of-some-c-compiler-implementations.html">&lt;p&gt;最近在阅读一些c99/c11编译器实现的代码，这些代码各有优缺点，先总结如下。&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;仓库&lt;/th&gt;
+      &lt;th&gt;特点&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;wgtcc(c11)&lt;/td&gt;
+      &lt;td&gt;c++11/pre/lex/parse/sema/codegen/64位;type和ast的抽象层次稍有欠缺&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;axcc(c11)&lt;/td&gt;
+      &lt;td&gt;c++11/pre/lex/parse/sema;缺失代码codegen;type/ast抽象层次不错，代码质量高&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;cld(c99)&lt;/td&gt;
+      &lt;td&gt;c++17/pre/lex/parse/sema/codegen/llvm;使用了第三方;虽然使用了很多新特性，但是代码并不简洁，甚至比较难以阅读，代码也不够严谨&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;clang2.7(c99)&lt;/td&gt;
+      &lt;td&gt;c++/pre/lex/parse/sema/codegen/llvm;最权威的;代码文件多，且包含一些自动生成的机制，难以阅读；使用了很多模块特性和llvm数据结构，难以拆解。&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ucc(c89)&lt;/td&gt;
+      &lt;td&gt;c89/lex/parse/sema/ir/codegen/32位;比较完整的实现，命名比较规范，代码抽象层次不高，不够高内聚，也有比较多的补丁。可惜后端是个32位。&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;lcc(c89/c99)&lt;/td&gt;
+      &lt;td&gt;c89/lex/parse/sema/codegen/32位; 属于比较早期的实现，代码命名过于不规范，难以阅读，后端采用生成工具，难以阅读。只能用于帮助理解概念。&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;chibicc(c11)&lt;/td&gt;
+      &lt;td&gt;c11/pre/lex/parse/sema/codegen/64；比较完整的实现，代码抽象层次不高，对于后端代码生成，值得比较好好学习。&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;subc&lt;/td&gt;
+      &lt;td&gt;c89/lex/parse/sema/codegen/32位; 代码实现没有什么技巧吧，纯粹是为了实现编译器，完整性不如ucc。&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;我的述求：&lt;/p&gt;
+
+&lt;p&gt;一：能够锻炼编程能力，所以我倾向于选择抽象能力高的，具备一定的设计能力，我选择c++实现的&lt;/p&gt;
+
+&lt;p&gt;二：阅读编译器代码，我希望其实现比较完整，前端的语言解析完整，后端倾向于64位&lt;/p&gt;
+
+&lt;p&gt;从业界来说，最好的编译器实现当然是clang，可惜实在是过于庞大了，即使是早期版本（driver/数据结构/模板/tablegen/cmakelists构建）。退而求其次，我觉得axcc/wgtcc/chibicc/ucc是比较好的选择.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;axcc为主, wgtcc补充，解决我的第一点要求。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;chibicc/ucc补充代码生成和编译知识，这两个都实现的比较完整，解决我的第二点需求。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;我是隔一段时间就开始挑战clang…，每次都是失败，确实是过于庞大！！！&lt;/p&gt;</content><author><name>Riccardo Graziosi</name></author><category term="c语言" /><summary type="html">深入学习c</summary></entry><entry><title type="html">C++17 新特性</title><link href="http://localhost:4000/c-17-new-feature.html" rel="alternate" type="text/html" title="C++17 新特性" /><published>2021-10-03T00:00:00+08:00</published><updated>2021-10-03T00:00:00+08:00</updated><id>http://localhost:4000/c++17-new-feature</id><content type="html" xml:base="http://localhost:4000/c-17-new-feature.html">&lt;p&gt;1&amp;gt; 结构化绑定&lt;/p&gt;
 
 &lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;/// 可以将public的属性成员绑定到变量上.&lt;/span&gt;
 
@@ -2221,478 +2503,4 @@ public:
      看论文做算法吧…&lt;/li&gt;
   &lt;li&gt;vad&lt;/li&gt;
   &lt;li&gt;agc&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>Riccardo Graziosi</name></author><category term="audio" /><category term="process" /><summary type="html">about audio process algorithm</summary></entry><entry><title type="html">计算性能优化</title><link href="http://localhost:4000/performance-optimazing.html" rel="alternate" type="text/html" title="计算性能优化" /><published>2021-01-06T00:00:00+08:00</published><updated>2021-01-06T00:00:00+08:00</updated><id>http://localhost:4000/performance-optimazing</id><content type="html" xml:base="http://localhost:4000/performance-optimazing.html">&lt;h3 id=&quot;前言&quot;&gt;前言&lt;/h3&gt;
-
-&lt;p&gt;计算性能优化，在算法复杂度不变的前提下，能够充分利用并行指令和缓存来做优化，加速运算。
-性能优化是一个无穷无尽的过程，是极度需要耐心和技巧的过程.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;openblas加速运算&lt;/li&gt;
-  &lt;li&gt;NEON指令&lt;/li&gt;
-  &lt;li&gt;SSE指令&lt;/li&gt;
-  &lt;li&gt;定点化操作&lt;/li&gt;
-  &lt;li&gt;查表优化，空间换时间&lt;/li&gt;
-  &lt;li&gt;位运算优化&lt;/li&gt;
-  &lt;li&gt;数值计算优化，牛顿迭代，最小二乘法&lt;/li&gt;
-  &lt;li&gt;时频域变换，时域卷积等于频域的乘积&lt;/li&gt;
-  &lt;li&gt;fft运算优化&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;openblas的加速&quot;&gt;openblas的加速&lt;/h3&gt;
-
-&lt;p&gt;在移动端部署神经网络模型，由于手机一般是高通芯片，主频都比较高，再加上模型比较小的话，是可以采用openblas来进行加速运算矩阵x向量，以及向量的内积运算。&lt;/p&gt;
-
-&lt;p&gt;[openblas作者的一个报告]https://www.leiphone.com/news/201704/Puevv3ZWxn0heoEv.html&lt;/p&gt;
-
-&lt;p&gt;关于原生c++实现矩阵乘法和矩阵和向量乘法与openblas的对比，可以参考我的github仓库. &lt;a href=&quot;https://github.com/iiicp/project-arrange/tree/master/performance-optimazing&quot;&gt;openblas的优化对比&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;下面列出来关于使用openblas的三个函数&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  /// y = alpha * x + y; (小规模向量会负优化，至少要大于512)
-  void VecAddVec_blas(Vec&amp;lt;float&amp;gt; &amp;amp;x, Vec&amp;lt;float&amp;gt; &amp;amp;y, float alpha) {
-    assert(x.row == y.row);
-    int n = x.row;
-    cblas_saxpy(n, alpha, x.data, 1, y.data, 1);
-  }
-
-  /// C = alpha * A * b + beta * C
-  Vec&amp;lt;float&amp;gt; MatMulVec_blas(Matrix&amp;lt;float&amp;gt; &amp;amp;A, Vec&amp;lt;float&amp;gt; &amp;amp;b) {
-    assert(A.col == b.row);
-
-    Vec&amp;lt;float&amp;gt; c(A.row);
-
-    int M = A.row, N = A.col;
-    float alpha = 1.0f, beta = 0.0f;
-    int lda = A.col;
-    cblas_sgemv(CblasRowMajor, CblasNoTrans, M, N, alpha, A.data, lda, b.data,
-                1, beta, c.data, 1);
-
-    return c;
-  }
-
-  /// C = alpha * A * B + beta * C
-  Matrix&amp;lt;float&amp;gt; MatMulMat_blas(Matrix&amp;lt;float&amp;gt; &amp;amp;A, Matrix&amp;lt;float&amp;gt; &amp;amp;B) {
-    assert(A.col == B.row);
-
-    Matrix&amp;lt;float&amp;gt; C(A.row, B.col);
-
-    int M = A.row, N = B.col, K = B.row;
-    float alpha = 1.0f, beta = 0.0f;
-    int lda = A.col, ldb = B.col, ldc = B.col;
-    cblas_sgemm(CblasRowMajor, CblasNoTrans, CblasNoTrans, M, N, K, alpha,
-                A.data, lda, B.data, ldb, beta, C.data, ldc);
-
-    return C;
-  }
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;以下是测试结果，矩阵乘法和矩阵乘向量是一个巨大的优化!!!&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;C = alpha * A * B + beta * C: [256,128] x [128,64]
-native cpp time: 9.639ms
-openblas time: 0.393ms
-
-C = alpha * A * b + beta * C: [256,161] x [161, 1]
-native cpp time: 0.403ms
-openblas time: 0.017ms
-
-y = alpha * x + y: [512,1] + [512,1]
-native cpp time: 0.009ms
-openblas time: 0.004ms
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;lstm算子实现&quot;&gt;LSTM算子实现&lt;/h3&gt;
-
-&lt;p&gt;LSTM的逻辑计算结构是下图&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://pic3.zhimg.com/80/v2-074e25fdd8f18378e9f7d2f48d9259ca_1440w.jpg&quot; alt=&quot;lstm的逻辑结构图&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;遗忘门&lt;/p&gt;
-
-&lt;p&gt;forget_gate = tf.sigmoid(tf.matmul(Xt, W1) + tf.matmul(H(t-1), W2) + b12);&lt;/p&gt;
-
-&lt;p&gt;信息增强门&lt;/p&gt;
-
-&lt;p&gt;input_gate = tf.sigmoid(tf.matmul(Xt, W3) + tf.matmul(H(t-1), W4) + b34); &lt;br /&gt;
-middle_memory = tf.tanh(tf.matmul(Xt, W5) + tf.matmul(H(t-1), W6) + b56);&lt;/p&gt;
-
-&lt;p&gt;输出门&lt;/p&gt;
-
-&lt;p&gt;output_gate = tf.sigmoid(tf.matmul(Xt, W7) + tf.matmul(H(t-1), W8) + b78);&lt;/p&gt;
-
-&lt;p&gt;最终输出&lt;/p&gt;
-
-&lt;p&gt;Ct = C(t-1) * forget_gate + input_gate * middle_memory; 
-Ht = tf.tanh(Ct) * output_gate;
-yt = tf.softmax(Ht) /// 未使用到&lt;/p&gt;
-
-&lt;p&gt;从上面的计算过程中，可以发现 Xt * W(1,3,5,7) + b(12,34,56,78) 是可以合并成 向量x矩阵+偏置也就是全连接层。
-而H(t-1) * W(2,4,6,8)可以向量x矩阵来合并优化。再将第一步和第二步求和，即可以得到所有激活函数之前的值。&lt;/p&gt;
-
-&lt;p&gt;参考链接  &lt;br /&gt;
-https://zhuanlan.zhihu.com/p/76174753    &lt;br /&gt;
-https://www.zhihu.com/question/41949741/answer/318977452&lt;/p&gt;
-
-&lt;h3 id=&quot;cnn算子实现&quot;&gt;CNN算子实现&lt;/h3&gt;
-
-&lt;p&gt;整体理解起来比lstm要简单，cnn结构有如下基本概念:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;padding &lt;br /&gt;
-表示在input数据左右填充一些0，改变输出的大小。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;stride 
-卷积核位置每间隔多少来取数据, 默认stride是1. stride同样也会改变输出大小。&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;假设卷积核大小为(FH, FW), 输入大小(H, W)，那么padding和stride之后，输出大小为(OH, OW)有如下关系  &lt;br /&gt;
-OH = (H+2P-FH)/S + 1;  &lt;br /&gt;
-OW = (W+2P-FW)/S + 1;&lt;/p&gt;
-
-&lt;p&gt;多于多个卷积核的场景，权重数据的排布 (output_channel, input_channel, FH, FW)，比如通道数为3，大小为5x5的滤波器有20个时，可以写成(20, 3, 50, 50)&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;池化层&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;池化层的特征，无学习参数，通道数不变化。 
-池化层和卷积层不同，没有要学习的参数，池化只是从目标区域中取最大值（或者平均值），所以不存在要学习的参数 
-经过池化运算，输入数据和输出数据的通道数不会发生变化，计算是按照通道独立进行的。&lt;/p&gt;</content><author><name>Riccardo Graziosi</name></author><category term="SSE" /><category term="NEON" /><summary type="html">about performance-optimazing</summary></entry><entry><title type="html">c++中的网络编程</title><link href="http://localhost:4000/network-programming.html" rel="alternate" type="text/html" title="c++中的网络编程" /><published>2021-01-05T00:00:00+08:00</published><updated>2021-01-05T00:00:00+08:00</updated><id>http://localhost:4000/network-programming</id><content type="html" xml:base="http://localhost:4000/network-programming.html">&lt;h3 id=&quot;前言&quot;&gt;前言&lt;/h3&gt;
-
-&lt;p&gt;此次总结代码请参考我的github仓库&lt;a href=&quot;https://github.com/iiicp/project-arrange/tree/master/SocketProgramming&quot;&gt;Socket网络编程&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;socket编程&quot;&gt;socket编程&lt;/h3&gt;
-
-&lt;p&gt;典型的回声客户端实现，清晰明白了客户端和服务器的交互流程和核心API.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;服务端典型流程: socket() -&amp;gt; bind() -&amp;gt; listen() -&amp;gt; accept() -&amp;gt; (read()  write()) -&amp;gt; close();
-客户端典型流程: socket() -&amp;gt; connect() -&amp;gt; (read() write()) -&amp;gt; close()
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;常见socket编程问题&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;tcp头部细节&lt;/p&gt;
-
-    &lt;p&gt;16位源端口 + 16位目的端口    &lt;br /&gt;
- 32位SEQ
- 32位ACK
- 窗口大小、校验和都是2个字节 + …&lt;/p&gt;
-
-    &lt;p&gt;一共是20个字节的固定首部.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;端口范围2个字节，无符号数最大65535，其中0~1023为知名端口，用户端口最好在1024及以后&lt;/li&gt;
-  &lt;li&gt;ip地址分类, 第一个字节以0开头为A类(0~127)，第一个字节以10开头(128~191)为B类，第一个字节以110开头(192-223)为C类.
- ipv4是4个字节，ipv6为16个字节.&lt;/li&gt;
-  &lt;li&gt;字节序，网络字节序都是大端序(高位字节在前(人类可读的方式))，IP地址和端口都要转成网络字节序来传输.htonl和htons函数.
- &lt;a href=&quot;https://www.ruanyifeng.com/blog/2016/11/byte-order.html&quot;&gt;关于字节序讲解比较清晰的文章&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;路由器和交换机的作用  &lt;br /&gt;
- 路由器连接不同的局域网，是通过ip地址来进行转发
- 交换机作用于特定局域网，是通过mac地址来进行转发
- 路由器和交换机分别作用域网络层和数据链路层&lt;/li&gt;
-  &lt;li&gt;connect函数的调用时机是服务端调用listen函数之后，服务端调用listen函数之后会在accept函数处阻塞，等待用户调用connect.&lt;/li&gt;
-  &lt;li&gt;服务器什么时候会创建连接请求队列？在调用listen函数的时候，内部会创建一个连接请求队列。accept会从连接请求中取出客户端请求进行处理。&lt;/li&gt;
-  &lt;li&gt;客户端为什么不需要调用bind函数？客户端调用connect函数时，操作系统会自动给套接字分配客户端本机ip地址和端口，其中端口是随机的
- 服务端在请求队列中记录了这次连接请求，connect就会返回，或者出现异常connect会返回。&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;tcp滑动窗口原理 &lt;br /&gt;
-套接字成功分配之后，每个套接字都会有两个缓冲区，分别是输入缓冲区(read)，和输出缓冲区(write). tcp协议有个滑动窗口会动态调节发送的数据
-量，本质上是通过套接字IO缓冲区的拥塞程度(是否快满了，是否空闲很多)来调整。tcp会保证发送到输出缓冲区的数据一定能够传输到对方。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;tcp三次握手&lt;/p&gt;
-
-    &lt;p&gt;第一次		A-&amp;gt;B 	SYN(SEQ:1000, ACK:-)        &lt;br /&gt;
-第二次		B-&amp;gt;A    SYN+ACK(SEQ:2000, ACK:1001)        &lt;br /&gt;
-第三次		A-&amp;gt;B  	ACK(SEQ:1001, ACK:2001)&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;tcp正常传输数据&lt;/p&gt;
-
-    &lt;p&gt;第一次		A-&amp;gt;B 	SEQ:1200 数据100字节   &lt;br /&gt;
-第二次		B-&amp;gt;A    ACK:1301 已成功接收100个字节，请发送序列号为1301的数据包    &lt;br /&gt;
-第三次		A-&amp;gt;B 	SEQ:1301 数据200字节   &lt;br /&gt;
-第四次		B-&amp;gt;A 	ACK:1502 已成功接收200个字节，请发送序列号为1502的数据包&lt;/p&gt;
-
-    &lt;p&gt;若没有收到ACK消息，则会触发超时重传机制.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;tcp四次挥手&lt;/p&gt;
-
-    &lt;p&gt;第一次	 	A-&amp;gt;B 	FIN(SEQ:5000, ACK:-)     &lt;br /&gt;
-第二次		B-&amp;gt;A 	ACK(SEQ:7000, ACK:5001) B向A反馈，表示成功收到了请求断开的消息&lt;/p&gt;
-
-    &lt;p&gt;第三次 		B-&amp;gt;A 	FIN(SEQ:7001, ACK:5001)      &lt;br /&gt;
-第四次		A-&amp;gt;B 	ACK(SEQ:5001, ACK:7002) A向B反馈，表示成功收到了请求断开的消息&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;tcp怎样通过ack和seq保证消息不丢失?&lt;/p&gt;
-
-    &lt;p&gt;通过ACK的应答知道是否对方成功收到了自己发送的消息，如果没有收到应答，会重新发送SEQ消息&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;tcp的半关闭情况&lt;/p&gt;
-
-    &lt;p&gt;因为tcp是双工的模式，可以支持半关闭。close函数是全关闭，半关闭通过shutdown函数来实现。
-半关闭会发送EOF消息。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;tcp常用的socketopt参数&lt;/p&gt;
-
-    &lt;p&gt;一: 通过getsockopt和setsockopt两个函数来查看和修改socket属性&lt;/p&gt;
-
-    &lt;p&gt;二: 通过SO_SENDBUF &amp;amp;&amp;amp; SO_RCVBUF修改socket输入和输出缓冲区大小&lt;/p&gt;
-
-    &lt;p&gt;三: 设置SO_REUSEADDR为1，解决服务器重启的bind() error.&lt;/p&gt;
-
-    &lt;p&gt;场景是先进行ctrl+c关闭服务端，相当于服务端发送了FIN
-信息，此时再次用相同的端口来启动服务器，此时服务器会启动不了，出现bind() error错误。大约3分钟后，服务器
-可以启动起来。&lt;/p&gt;
-
-    &lt;p&gt;服务端 				
-ctrl+c -&amp;gt; FIN(SEQ:1111, ACK -)    	
-客户端
-ACK(SEQ: 2000, ACK: 1112)&lt;/p&gt;
-
-    &lt;p&gt;服务端(此时处于time_wait状态)
-谁先断开连接，谁就属于time_wait状态，属于time_wait状态时端口是占用状态&lt;/p&gt;
-
-    &lt;p&gt;客户端也会有time_wait状态，不过因为客户端每次连接都是动态分配端口号，所以客户端先断开连接，再次连接不会出现
-bind() error.&lt;/p&gt;
-
-    &lt;p&gt;time_wait状态的作用是保证最后的ACK消息可达. time_wait状态也并不是一直都好，有时候我们需要立即重启服务，所以
-需要将处于time_wait状态的端口号重新分配给新的套接字。&lt;/p&gt;
-
-    &lt;p&gt;四: TCP_NODELAY&lt;/p&gt;
-
-    &lt;p&gt;Nagle算法是为了减少网络负载，每次发送一个包，需等待ACK后，才能再次发送下一个包，Nagle算法充分利用了缓冲区，因为在等待ACK
-的时候，缓冲区能够填入更多的数据，下一个包就能传输更多的数据了，使用Nagle算法能够大大减少网络包的数量，从而减少了网络负载。
-但是当网络数据包总量不变的情况下，关闭Nagle算法，速度会更快，因为不需要先等待ACK回来，比如传输大文件的时候。
-当传输大文件时，每次写入缓冲区的速度都很快，缓冲区都能填满，这个时候禁用Nagle算法，可以加快网络数据传输。因为缓冲区得到
-了最大化利用，每个包也都是必须的，不存在很多携带数据很少的包.&lt;/p&gt;
-
-    &lt;p&gt;当要关闭Nagle算法的时候，使用TCP_NODELAY选项，将其值修改为1.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;socket编程场景&quot;&gt;socket编程场景&lt;/h3&gt;
-
-&lt;p&gt;场景&lt;/p&gt;
-
-&lt;p&gt;本地机器两个进程间通信  &lt;br /&gt;
-远程两个进程间通信 &lt;br /&gt;
-进程间通信的其它方式比如管道和共享内存&lt;/p&gt;
-
-&lt;p&gt;编程模型&lt;/p&gt;
-
-&lt;p&gt;单进程、单线程的方式 (适用于客户端两个进程间通信场景)   &lt;br /&gt;
-多线程模型   &lt;br /&gt;
-多进程模型  &lt;br /&gt;
-io复用模型（select/poll/epoll）&lt;/p&gt;
-
-&lt;h3 id=&quot;https协议&quot;&gt;https协议&lt;/h3&gt;
-
-&lt;p&gt;https = http + ssl&lt;/p&gt;
-
-&lt;p&gt;ssl协商目的是将服务器公钥下发给客户端，客户端通过此公钥、服务器通过私钥，来用同一种加密算法结合ssl协商过程中的三个随机数来分别生成同样的秘钥，此秘钥是对称加密的秘钥，用于客户端和服务器后续传递消息加密。 &lt;br /&gt;
-ssl协商共分为四步:&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;客户端向服务器请求证书公钥. 同时会传递客户端的ssl协议版本、支持的加密算法、压缩算法还有一个随机数1&lt;/li&gt;
-  &lt;li&gt;服务器向客户端发送协议版本、采用的加密算法、随机数2以及证书公钥。&lt;/li&gt;
-  &lt;li&gt;客户端校验证书公钥是否合法（通过证书颁发机构、根证书、证书的签名算法公共验证此证书是否伪造），如果合法，向服务器传输随机数3，以及编码改变通知、握手结束通知等消息。&lt;/li&gt;
-  &lt;li&gt;服务器向客户端发送编码改变通知和握手结束通知。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;客户端通过协商的加密算法对三个随机数进行加密获得对称加密的私钥，然后用非对称加密的公钥进行加密，传给服务器. &lt;br /&gt;
-服务器通过私钥解密得到对称加密的私钥，同时也用同样的加密算法对三个随机数进行加密获得对称加密的私钥，进行比对。 
-如果内容是一样的，后续的http传递的信息都会通过对称加密的私钥进行加解密。&lt;/p&gt;
-
-&lt;p&gt;http常见的返回状态码&lt;/p&gt;
-
-&lt;p&gt;200表示ok
-301/302表示重定向 
-4xx客户端错误，比如404客户端请求的地址不存在 
-5xx服务器错误，比如503&lt;/p&gt;
-
-&lt;h3 id=&quot;https编程&quot;&gt;https编程&lt;/h3&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;场景  &lt;br /&gt;
-用于短时交互场景，比如我们就是做个网络认证，不需要持续传输数据，通常数据格式采用json或者xml的方式。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;curl的使用 &lt;br /&gt;
-由于c++标准库目前还没有包含网络请求模块，目前比较采样的比较多的是curl，curl是c语言实现的，所以也是一个跨平台的方案。有时候我们也有必要采用原生的方案来做，因为curl配合openssl会导致动态库体积增大不少。&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;网络编程实战案例&quot;&gt;网络编程实战案例&lt;/h3&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;两个进程间通信(常用于间接实现目的，有可能当前进程没办法直接发起网络请求，需要借助另一个进程)&lt;/li&gt;
-  &lt;li&gt;sdk请求认证模块(需要保证多线程安全，资源有效退出)&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>Riccardo Graziosi</name></author><category term="c++/network" /><summary type="html">about network programing</summary></entry><entry><title type="html">c++中的多线程编程</title><link href="http://localhost:4000/multi-thread-programing.html" rel="alternate" type="text/html" title="c++中的多线程编程" /><published>2021-01-04T00:00:00+08:00</published><updated>2021-01-04T00:00:00+08:00</updated><id>http://localhost:4000/multi-thread-programing</id><content type="html" xml:base="http://localhost:4000/multi-thread-programing.html">&lt;h3 id=&quot;pthread和stdthread的使用&quot;&gt;pthread和std::thread的使用&lt;/h3&gt;
-&lt;ol&gt;
-  &lt;li&gt;线程创建&lt;/li&gt;
-  &lt;li&gt;线程处理函数&lt;/li&gt;
-  &lt;li&gt;线程退出&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;以上三点请参考我的&lt;a href=&quot;https://github.com/iiicp/project-arrange/tree/master/multi-thread-test&quot;&gt;多线程测试&lt;/a&gt;，我分别用两个类来进行测试.&lt;/p&gt;
-
-&lt;p&gt;现在推荐使用std::thread，因为语言兼容了跨平台, pthread虽然也是跨平台但是
-在windows上需要自己编译pthread线程库，比较麻烦。&lt;/p&gt;
-
-&lt;h3 id=&quot;关于等待线程退出&quot;&gt;关于等待线程退出&lt;/h3&gt;
-
-&lt;p&gt;线程是否退出是至关重要的，因为关联到资源是否被释放，在c++中是使用join的方式来等待线程退出。&lt;/p&gt;
-
-&lt;p&gt;std::thread提供了joinable和join，在join之前我们一般先调用joinable来进行检测，避免重复join.&lt;/p&gt;
-
-&lt;p&gt;线程退出不了的问题&lt;/p&gt;
-
-&lt;p&gt;如果一个线程退出不了，那么代码就会阻塞在join函数调用处。导致应用卡死。当出现线程退出不了的时候，多半是
-与死锁有关，导致控制线程退出的变量，得不到更新。所以线程和锁是两个相依相伴的角色，互相成就。因为线程并发需要访问共享资源，
-因此要保护共享资源的安全性，才有了锁的用武之地，而因为锁，才能够使多线程成为可行的方式。&lt;/p&gt;
-
-&lt;h3 id=&quot;线程局部变量&quot;&gt;线程局部变量&lt;/h3&gt;
-
-&lt;p&gt;线程局部变量就是给每个线程单独携带些信息，通过这个可以定制化线程信息。std::thread提供了thread_local变量机制，
-每个线程都会得到这个拷贝信息。使用时，threadlocal必须声明为类外全局变量，事例可以参考&lt;a href=&quot;https://github.com/iiicp/project-arrange/tree/master/multi-thread-test&quot;&gt;线程局部变量测试&lt;/a&gt;。
-演示了创建5个线程，每个线程单独持有自己的file变量，自己根据自己的线程id来创建文件。
-（相当于给系统的thread类加上了个局部属性，还是很有用的）&lt;/p&gt;
-
-&lt;h3 id=&quot;关于锁&quot;&gt;关于锁&lt;/h3&gt;
-&lt;ol&gt;
-  &lt;li&gt;互斥锁
- std::mutex，需引入&lt;mutex&gt; c++11提供&lt;/mutex&gt;&lt;/li&gt;
-  &lt;li&gt;读写锁 
- std::shared_mutex，需引入&lt;shared_mutex&gt; c++17提供
- 当写时，读写阻塞，当只有读时，是可以共享锁。适用于读的场景更多。&lt;/shared_mutex&gt;&lt;/li&gt;
-  &lt;li&gt;可重入锁 
- 就是递归锁，可以避免因重复加锁导致死锁的问题，对于重复加锁的问题，可以通过拆解子函数，然后提供wrapper来避免。&lt;/li&gt;
-  &lt;li&gt;C++封装的RAII类 
- std::lock_guard
- std::unique_guard，可以配合condition_var来使用&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;具体使用的例子，可以参考我的&lt;a href=&quot;https://github.com/iiicp/project-arrange/tree/master/multi-thread-test&quot;&gt;多线程锁的测试&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;关于死锁&quot;&gt;关于死锁&lt;/h3&gt;
-
-&lt;p&gt;某对象一直拿不到锁，就会死锁.
-原因：&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;之前错过了释放锁的时机，再次进入就会死锁。（比如因为异常提前退出，没走到解锁的代码）&lt;/li&gt;
-  &lt;li&gt;两个对象互相占有一个互斥资源，去请求对方的资源。(资源需要按序分配)&lt;/li&gt;
-  &lt;li&gt;对于互斥锁防止递归调用，设计时子函数若需要调用其它子函数，应该将此子函数拆分成多个子函数，设计一个包装的API，
-让用户去调用。或者考虑可重入锁。推荐是拆分，一般而言底层库可以做成粒度很小的子函数，在此基础上，设计一些包装的API，
-就不需要加锁了。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;线程同步协作的方式&quot;&gt;线程同步(协作)的方式&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;条件变量&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;条件变量机制有两点问题需要注意，分别是&lt;strong&gt;信号量丢失&lt;/strong&gt;和&lt;strong&gt;虚假唤醒&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;信号量丢失的问题&lt;/p&gt;
-
-&lt;p&gt;当被通知对象不是处于wait状态时，条件变量的notify是会被浪费掉的，所以如果要通过notify来做一些操作，被通知对象要放在循环中去处理，下一次循环时就能判断到上一次的状态修改了。&lt;/p&gt;
-
-&lt;p&gt;虚假唤醒问题&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;系统系统有时候会唤醒条件变量，我们需要再次检测是否条件是否满足&lt;/li&gt;
-  &lt;li&gt;即使一个线程让条件变量的条件满足了，到另外等待线程执行之前，中间又导致条件不满足了也是有可能，所以还需要判断下条件是否真的满足。
-所以解决这个问题的办法就是每次条件变量别激活时，再次检测条件的真实性。所以使用while()+wait的方式来做&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;补充一点 &lt;br /&gt;
-为什么条件变量需要配合mutex来用，是因为解锁和休眠等待需要保持原子操作。若不是原子操作，在解锁后，时间片被切换到另外一个线程，再次发送条件信号，让条件满足了，等时间片再次切换到当前线程的休眠等待操作时，信号已经被浪费掉了，此时仍然会阻塞。&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mutex.lock()
-while (condition_var is not true)
-{
-	mutex.unlock();
-	/// 此处解锁和休眠是分离的，可能unlock之后，被切换到其它线程，在回来的时候条件满足了
-	/// 但是此时只能继续等待了
-	/// 所以 解锁和等待 必须是原子的!!!
-	sleep(); /// 等待
-	mutex.lock();
-} 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;信号量&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;std::thread并没有封装信号量，所以只能使用操作系统api来做. mac系统对于semaphore.h中sem_init和sem_destroy都设置为过期了.
-所以推荐还是条件变量加锁的方式来进行同步。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;消息队列&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;消息队列是对条件变量以及下面的生产者和消费者模型的一个封装. 实际中常会用消息队列在多个线程之间做数据共享。&lt;/p&gt;
-
-&lt;h3 id=&quot;生产者消费者模型&quot;&gt;生产者消费者模型&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
----------------------- 	     
-| 生产者线程				 
-|							 
-|							 
-| 1. 获取输入数据到输入队列		 
-|（若输入队列已满，此处会阻塞)	 	
-|							 
-|							 
-| 2. 从输出队列获取处理完的		 
-| ----------------------	 
-							 			
-------------------
-|输入队列 | 输出队列|
-------------------
-
- -------------------------
- | 消费者线程
- |
- |
- | void processLoop()			
- | {					
- | 1. 从消息队列取数据
- |	  (消息队列无数据，此处会阻塞)
- | 2. 处理数据
- | 3. 将处理完数据写到输出队列
- |	  (输出队列已满，此处会阻塞)
- |}
- | -------------------------
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;项目实践&quot;&gt;项目实践&lt;/h3&gt;
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;循环队列(消息队列)
- 结合条件变量来实现生产者和消费者&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;SDK库中网络请求的正确用法(封闭性)&lt;br /&gt;
- 设置一个单独的网络请求线程，既保证了多线程下网络请求发起安全，同时也能方便的控制网络请求退出&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;多线程程序的debug&quot;&gt;多线程程序的debug&lt;/h3&gt;
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;log大法 &lt;br /&gt;
- 对每一个不太频繁的方法都要打个info信息&lt;br /&gt;
- 对每一个可能异常退出的地方都要打上log&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;IDE辅助(xcode)  &lt;br /&gt;
- 查看所有的线程
- 查看堆栈&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;</content><author><name>Riccardo Graziosi</name></author><category term="c++/thread" /><summary type="html">about multi thread</summary></entry></feed>
+&lt;/ol&gt;</content><author><name>Riccardo Graziosi</name></author><category term="audio" /><category term="process" /><summary type="html">about audio process algorithm</summary></entry></feed>
